@@ -1,0 +1,20 @@
+rules:
+  - name: "Unusual HTTP Payload"
+    protocol: "HTTP"
+    condition: "len(payload) > 10000"
+    action: "alert"
+
+  - name: "Blacklisted DNS Query"
+    protocol: "DNS"
+    condition: "'malicious.com' in query"
+    action: "alert"
+
+  - name: "Multiple Failed Logins"
+    protocol: "SSH"
+    condition: "failed_logins > 5"
+    action: "alert"
+
+  - name: "Suspicious Port Scan"
+    protocol: "TCP"
+    condition: "src_ip in scan_list and count > 10"
+    action: "log"
