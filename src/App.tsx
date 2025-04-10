@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { Terminal, Shield, Activity, FileJson, Mail, Database, Github, Download, PlayCircle } from 'lucide-react';
+import { Terminal, Shield, Activity, FileJson, Mail, Database, Github, Download } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Line, Pie } from 'react-chartjs-2';
